@@ -56,7 +56,7 @@ let positions = [3, 6, 7, 16]
 let not = []
 
 function getLast(array) {
-  for (item of array){
+  for (let item of array){
     return array.pop();
   }
 if (array < 1){
@@ -90,18 +90,33 @@ console.log('Includes Atlantic:', find('Atlantic', oceans));
 // ----------------------
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
-function isFirstLetter(letter, string) {
 
+function isFirstLetter(letter, string) {
+  if (string.charAt(0) === letter){
+    return true;
+  }
+  return false;
 }
+console.log('Apple starts with a', isFirstLetter('a', 'apple'));
+console.log('Giraffe starts with j', isFirstLetter('j','giraffe'));
+
+// reference: https://www.w3schools.com/jsref/jsref_charat.asp
 
 
 // 9. Function to return the sum of all numbers in an array
+
+let array = [3, 8, 5, 2, 9, 11]
+
 function sumAll(array) {
   let sum = 0;
   // TODO: loop to add items
-
-  // TODO: return the sum
+for (let i of array){
+  sum += i;
 }
+  // TODO: return the sum
+  console.log('Sum is: ' + sum);
+}
+
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
