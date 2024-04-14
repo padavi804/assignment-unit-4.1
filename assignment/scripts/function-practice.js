@@ -71,16 +71,16 @@ console.log(getLast(not));
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 let oceans = ['Pacific', 'Atlantic', 'Indian']
 
-function find(value, array) {
-  for (item of array){
-    if (item == value){
+
+function find(value, array){
+  for (let item of array){
+    if (item === value){
       return true;
     }
-    else {
-      return false;
-    }
   }
+  return false;
 }
+
 console.log('Includes Pacific:', find('Pacific', oceans));
 console.log('Includes Antarctic:', find('Antarctic', oceans));
 console.log('Includes Atlantic:', find('Atlantic', oceans));
