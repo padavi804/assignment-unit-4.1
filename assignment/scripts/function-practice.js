@@ -116,7 +116,7 @@ for (let i of array){
   // TODO: return the sum
   console.log('Sum is: ' + sum);
 }
-
+// console.log(sumAll(array));
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
